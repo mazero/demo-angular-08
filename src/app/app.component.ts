@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { User } from './classes/user';
 
 @Component({
@@ -6,7 +6,7 @@ import { User } from './classes/user';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit, OnDestroy {
   public title: string = 'Angular Nomades';
   public user: User = new User(10, 'Camille', 'Pasche');
   public users: User[] = [
@@ -33,7 +33,13 @@ export class AppComponent {
     "We're using optional parameters defined by the truncate pipe to show its flexibility!"
   ];
 
-  constructor() {}
+  constructor() {
+    console.log('constructor')
+  }
+
+  ngOnInit(): void {
+
+  }
 
   public sayHello(): string {
     return 'Hello World !';
@@ -41,5 +47,9 @@ export class AppComponent {
 
   public displayBlue(): boolean {
     return this.color === 'blue' ? true : false;
+  }
+
+  ngOnDestroy(): void {
+    console.log('ngOnDestroy')
   }
 }

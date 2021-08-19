@@ -10,6 +10,7 @@ import { SizerComponent } from './sizer/sizer.component';
 import { FormsModule } from '@angular/forms';
 import { GetCharPipe } from './pipes/get-char.pipe';
 import { TruncatePipe } from './pipes/truncate.pipe';
+import { JokeFormComponent } from './joke/joke-form/joke-form.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { TruncatePipe } from './pipes/truncate.pipe';
     ToggleDirective,
     SizerComponent,
     GetCharPipe,
-    TruncatePipe
+    TruncatePipe,
+    JokeFormComponent
   ],
   imports: [
     BrowserModule,

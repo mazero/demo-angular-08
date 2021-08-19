@@ -1,10 +1,12 @@
 import { GetCharPipe } from './../pipes/get-char.pipe';
-import { Component, Input, OnInit, Output, EventEmitter  } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter, ViewEncapsulation  } from '@angular/core';
+import { NONE_TYPE } from '@angular/compiler';
 
 @Component({
   selector: 'app-sizer',
   templateUrl: './sizer.component.html',
-  styleUrls: ['./sizer.component.scss']
+  styleUrls: ['./sizer.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class SizerComponent implements OnInit {
   @Input() public size!: number | string;
