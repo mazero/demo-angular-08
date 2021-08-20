@@ -11,6 +11,8 @@ import { FormsModule } from '@angular/forms';
 import { GetCharPipe } from './pipes/get-char.pipe';
 import { TruncatePipe } from './pipes/truncate.pipe';
 import { JokeFormComponent } from './joke/joke-form/joke-form.component';
+import { JokeComponent } from './joke/joke.component';
+import { JokeListComponent } from './joke/joke-list/joke-list.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { JokeFormComponent } from './joke/joke-form/joke-form.component';
     SizerComponent,
     GetCharPipe,
     TruncatePipe,
-    JokeFormComponent
+    JokeFormComponent,
+    JokeComponent,
+    JokeListComponent
   ],
   imports: [
     BrowserModule,
